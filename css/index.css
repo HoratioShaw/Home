@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    background: #2e2e2c;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+    color: #e0e0e0;
+    background: rgba(255, 64, 129, 0.35);
+}
+
+#rin-bg {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+    position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-color: #818181;
+    background-image: url('https://horatio.cn/images/index.webp');
+}
+
+#rin-bg:after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    z-index: -1;
+    position: fixed;
+    background-color: rgba(66, 66, 66, 0.6);
+}
+
+#rin-footer {
+    bottom: 0;
+    margin: auto;
+    width: 100vw;
+    position: absolute;
+    padding: 10px 0 10px 0;
+}
+
+#rin-footer div {
+    font-size: 14px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.79);
+}
+
+#rin-footer div a {
+    color: #2196f3;
+    font-weight: 500;
+    transition: all 0.3s;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.rin-tr {
+    width: 80%;
+    height: 2px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+#rin-main {
+    width: 600px;
+    margin: auto;
+    text-align: center;
+    margin-top: calc(50vh - 200px);
+}
+
+@media (max-width: 600px) {
+    #rin-main {
+        width: 95%;
+    }
+}
+
+#rin-headimg {
+    background-image: url('https://q1.qlogo.cn/g?b=qq&nk=1115058004&s=640');
+    border-radius: 20px; /* Updated border-radius to 20px */
+    height: 150px;
+    width: 150px;
+    margin: auto;
+    cursor: pointer;
+    background-size: cover;
+    border: 0px solid #fff;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.55);
+    -webkit-transition: 0.4s;
+    -webkit-transition: -webkit-transform 0.4s ease-out;
+    transition: transform 0.4s ease-out;
+    -moz-transition: -moz-transform 0.4s ease-out;
+}
+
+/* #rin-headimg:hover {
+    -webkit-transform: rotateZ(360deg);
+    transform: rotate(360deg) scale(1.2);
+} */
+
+.rin-name {
+    margin-top: 20px;
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.55);
+}
+
+.rin-description {
+    color: white;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.55);
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    letter-spacing: 7px;
+}
+
+.rin-btn {
+    color: white;
+    margin-top: 15px;
+}
+
+.rin-btn-div {
+    /* 按钮边距 */
+    letter-spacing: 5px;
+}
+
+.rin-btn-Home {
+    border-bottom: 1.9px solid rgb(255, 170, 0);
+    /* border: 1px solid #ff8e00; */
+    font-size: 16px;
+}
+
+.rin-btn-Home:hover {
+    background-color: rgb(255, 170, 0);
+    transition: all 0.3s;
+}
+
+.rin-btn-Blog {
+    border-bottom: 1.9px solid rgb(85, 170, 255);
+    font-size: 16px;
+}
+
+.rin-btn-Blog:hover {
+    background-color: rgb(85, 170, 255);
+    transition: all 0.3s;
+}
+
+.bg-link {
+    color: #DBDFE6;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.icpimg {
+    position: relative;
+    right: 3px;
+    top: 3px;
+}
