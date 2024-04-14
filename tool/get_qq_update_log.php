@@ -28,7 +28,7 @@ $update_content .= "[LoongArch](https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_{$
 // 备份
 if ($backup_link_num !== "") {
     $backup_link_num = intval($backup_link_num) ?: 0;
-    $update_content .= "备份：\n";
+    $update_content .= "\n备份：\n";
     $update_content .= "- Windows:\n";
     $update_content .= "[X86](https://t.me/linqiqi_backup/{$backup_link_num}) | [X64](https://t.me/linqiqi_backup/" . ++$backup_link_num . ")\n";
     $update_content .= "- MacOS:\n";
