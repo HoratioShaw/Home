@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <link rel="icon" href="https://q1.qlogo.cn/g?b=qq&nk=1115058004&s=640">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生成QQ更新日志</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 80%;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            margin: 20px;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], textarea {
+            width: calc(100% - 40px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        input[type="submit"] {
+            width: 50%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>生成QQ更新日志</h1>
+        <form id="updateForm" action="generate_update.php" method="post" target="_blank">
+            <label for="win_big_version_code">Windows大版本号：</label>
+            <input type="text" id="win_big_version_code" name="win_big_version_code" value="9.9.9"><br>
+            <label for="linux_big_version_code">Linux大版本号：</label>
+            <input type="text" id="linux_big_version_code" name="linux_big_version_code" value="3.2.7"><br>
+            <label for="mac_version_code">Mac大版本号：</label>
+            <input type="text" id="mac_version_code" name="mac_version_code" value="6.9.32"><br>
+            <label for="update_log">更新日志：</label>
+            <textarea id="update_log" name="update_log"></textarea><br>
+            <label for="small_version_code">小版本号：</label>
+            <input type="text" id="small_version_code" name="small_version_code"><br>
+            <label for="update_date">特征码（此处用于替换链接，小版本号或日期）：</label>
+            <input type="text" id="update_date" name="update_date"><br>
+            <label for="backup_link_num">备份链接初始数字（不输入删除备份段）：</label>
+            <input type="text" id="backup_link_num" name="backup_link_num"><br>
+            <input type="submit" value="生成更新日志">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("updateForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            this.submit();
+        });
+    </script>
+</body>
+</html>
