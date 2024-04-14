@@ -8,6 +8,7 @@ $update_log = $_POST["update_log"];
 $small_version_code = $_POST["small_version_code"];
 $update_date = $_POST["update_date"];
 $backup_link_num = $_POST["backup_link_num"];
+$pubilsh_num = $_POST["pubilsh_num"];
 
 // 替换链接
 $update_content = "Windows QQ_NT {$win_big_version_code}.{$small_version_code} &\n";
@@ -16,13 +17,13 @@ $update_content .= "Linux QQ_NT {$linux_big_version_code}.{$small_version_code}\
 $update_content .= "\n官方更新内容：\n{$update_log}\n\n";
 $update_content .= "下载：\n";
 $update_content .= "- Windows:\n";
-$update_content .= "[X86](https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_{$win_big_version_code}_{$update_date}_x86_01.exe) | [X64](https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_{$win_big_version_code}_{$update_date}_x64_01.exe)\n";
+$update_content .= "[X86](https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_{$win_big_version_code}_{$update_date}_x86_{$pubilsh_num}.exe) | [X64](https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_{$win_big_version_code}_{$update_date}_x64_{$pubilsh_num}.exe)\n";
 $update_content .= "- MacOS:\n";
-$update_content .= "[Dmg](https://dldir1.qq.com/qqfile/qq/QQNT/Mac/QQ_{$mac_version_code}_{$update_date}_01.dmg)\n";
+$update_content .= "[Dmg](https://dldir1.qq.com/qqfile/qq/QQNT/Mac/QQ_{$mac_version_code}_{$update_date}_{$pubilsh_num}.dmg)\n";
 $update_content .= "- Linux:\n";
-$update_content .= "[DEB_x64](https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_{$linux_big_version_code}_{$update_date}_amd64_01.deb) | [RPM_x64](https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_{$linux_big_version_code}_{$update_date}_x86_64_01.rpm) | [Appimage_x64](https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_{$linux_big_version_code}_{$update_date}_x86_64_01.AppImage)\n";
-$update_content .= "[DEB_arm](https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_{$linux_big_version_code}_{$update_date}_arm64_01.deb) | [RPM_arm](https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_{$linux_big_version_code}_{$update_date}_aarch64_01.rpm) | [Appimage_arm](https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_{$linux_big_version_code}_{$update_date}_arm64_01.AppImage)\n";
-$update_content .= "[LoongArch](https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_{$linux_big_version_code}_{$update_date}_loongarch64_01.deb) | [Mips](https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_{$linux_big_version_code}_{$update_date}_mips64el_01.deb)\n\n";
+$update_content .= "[DEB_x64](https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_{$linux_big_version_code}_{$update_date}_amd64_{$pubilsh_num}.deb) | [RPM_x64](https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_{$linux_big_version_code}_{$update_date}_x86_64_{$pubilsh_num}.rpm) | [Appimage_x64](https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_{$linux_big_version_code}_{$update_date}_x86_64_{$pubilsh_num}.AppImage)\n";
+$update_content .= "[DEB_arm](https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_{$linux_big_version_code}_{$update_date}_arm64_{$pubilsh_num}.deb) | [RPM_arm](https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_{$linux_big_version_code}_{$update_date}_aarch64_{$pubilsh_num}.rpm) | [Appimage_arm](https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_{$linux_big_version_code}_{$update_date}_arm64_{$pubilsh_num}.AppImage)\n";
+$update_content .= "[LoongArch](https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_{$linux_big_version_code}_{$update_date}_loongarch64_{$pubilsh_num}.deb) | [Mips](https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_{$linux_big_version_code}_{$update_date}_mips64el_{$pubilsh_num}.deb)\n\n";
 
 // 备份
 if ($backup_link_num !== "") {

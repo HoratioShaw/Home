@@ -61,7 +61,7 @@
 <body>
     <div class="container">
         <h1>生成QQ更新日志</h1>
-        <form id="updateForm" action="generate_update.php" method="post" target="_blank">
+        <form id="updateForm" action="tool/get_qq_update_log.php" method="post" target="_blank">
             <label for="win_big_version_code">Windows大版本号：</label>
             <input type="text" id="win_big_version_code" name="win_big_version_code" value="9.9.9"><br>
             <label for="linux_big_version_code">Linux大版本号：</label>
@@ -74,6 +74,8 @@
             <input type="text" id="small_version_code" name="small_version_code"><br>
             <label for="update_date">特征码（此处用于替换链接，小版本号或日期）：</label>
             <input type="text" id="update_date" name="update_date"><br>
+            <label for="backup_link_num">发版次数：</label>
+            <input type="text" id="pubilsh_num" name="backup_link_num" value="01"><br>
             <label for="backup_link_num">备份链接初始数字（不输入删除备份段）：</label>
             <input type="text" id="backup_link_num" name="backup_link_num"><br>
             <input type="submit" value="生成更新日志">
