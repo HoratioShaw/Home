@@ -21,7 +21,7 @@ body {
     background-attachment: fixed;
     background-position: 50% 50%;
     background-color: #818181;
-    background-image: url('https://horatio.cn/images/index.webp');
+    background-image: url('https://cdn.horatio.cn/images/blog_index.jpeg');
 }
 #rin-bg:after {
     top: 0;

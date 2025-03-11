@@ -81,7 +81,7 @@ body {
 }
 
 #rin-headimg {
-    background-image: url('https://q1.qlogo.cn/g?b=qq&nk=1115058004&s=640');
+    background-image: url('https://api.horatio.cn/avatar/qq.php?qq=1115058004');
     border-radius: 20px; /* Updated border-radius to 20px */
     height: 150px;
     width: 150px;
